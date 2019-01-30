@@ -1,49 +1,62 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <title>What's Open?</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="style.css">
-        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-    </head>
-    <body>
-        <section id="search-page">
-            <header id="title">
-                <h1>What's Open?</h1>
-            </header>
-            <form>
-                <legend>
-                    <p>Tell us what you're in the mood for, and we'll give you a list of places that are definitely open right now.</p>
-                </legend>
-                <input class="search-bar" id="search-location" type="text" name="location" placeholder="Where are you?">
-                <input class="search-bar" id="search-food" type="text" name="food" placeholder="What do you feel like?">
-                <input type="submit" id="search-button" value="Search">
-            </form>
-            <div class="icons">
-                <img class="pic" id="left" src="https://i.imgur.com/02vmZJG.png">
-                <img class="pic" id="middle" src="https://i.imgur.com/Ee7E5nq.png">
-                <img class="pic" id="right" src="https://i.imgur.com/laATZY0.png">
-            </div>
-            <div class="info">
-                <div class="blurb" id="blurb-left">
-                    <h2>Discover new tastes</h2>
-                    <p>
-                        Search for new restaurants, bars, bakeries, or any place you 
-                        can think of to get something to eat or drink. Try something new!
-                    </p>
-                    <img src="https://i.imgur.com/1VUZzay.png" alt="food">
-                </div>      
-                <div class="blurb" id="blurb-right">
-                    <h2>Know it's open</h2>
-                    <p>
-                        Search for new restaurants, bars, bakeries, or any place you 
-                        can think of to get something to eat or drink. Try something new!
-                    </p>
-                    <img src="https://i.imgur.com/fmzeakE.png" alt="food">
-                </div>
-                <!-- <div class="blurb" id="blurb-right">
+  <head>
+    <title>What's Open?</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  </head>
+  <body>
+    <section id="search-page">
+      <header id="title"><h1>What's Open?</h1></header>
+      <form id="search-form">
+        <legend>
+          <p>
+            Tell us what you're in the mood for, and we'll give you a list of
+            places that are definitely open right now.
+          </p>
+        </legend>
+        <input
+          class="search-bar"
+          id="search-location"
+          type="text"
+          name="location"
+          placeholder="Where are you?"
+        />
+        <input
+          class="search-bar"
+          id="search-food"
+          type="text"
+          name="food"
+          placeholder="What do you feel like?"
+        />
+        <input type="submit" id="search-button" value="Search" />
+      </form>
+      <div class="icons">
+        <img class="pic" id="left" src="https://i.imgur.com/02vmZJG.png" />
+        <img class="pic" id="middle" src="https://i.imgur.com/Ee7E5nq.png" />
+        <img class="pic" id="right" src="https://i.imgur.com/laATZY0.png" />
+      </div>
+      <div class="info">
+        <div class="blurb" id="blurb-left">
+          <h2>Discover new tastes</h2>
+          <p>
+            Search for new restaurants, bars, bakeries, or any place you can
+            think of to get something to eat or drink. Try something new!
+          </p>
+          <img src="https://i.imgur.com/1VUZzay.png" alt="food" />
+        </div>
+        <div class="blurb" id="blurb-right">
+          <h2>Know it's open</h2>
+          <p>
+            Search for new restaurants, bars, bakeries, or any place you can
+            think of to get something to eat or drink. Try something new!
+          </p>
+          <img src="https://i.imgur.com/fmzeakE.png" alt="food" />
+        </div>
+        <!-- <div class="blurb" id="blurb-right">
                     <h2>Stay local</h2>
                     <p>
                         Search for new restaurants, bars, bakeries, or any place you 
@@ -51,33 +64,37 @@
                     </p>
                     <img src="https://i.imgur.com/3H6WR7D.png" alt="food">
                 </div> -->
-            </div>
-            <div class="why">
-                <h2>WHY</h2>
-                <p>
-                    text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text
-                </p>
-            </div>
-        </section>
-        <section id="results-page" hidden>
-            <h2 class="results-header"></h2>      
-        </section>
-        
-        <section id="details-page">
+      </div>
+      <div class="why">
+        <h2>WHY</h2>
+        <p>
+          text text text text text text text text text text text text text text
+          text text text text text text text text text text text text text text
+          text text
+        </p>
+      </div>
+    </section>
+    <section id="results-page" hidden>
+      <h2 class="results-header"></h2>
+      <div id="results-container"></div>
+    </section>
 
-        </section>
+    <section id="details-page"></section>
 
-        <script type="text/javascript" language="javascript" src="jsonData.js"></script>
-        <script src="index.js"></script>
-    </body>
-    <nav role="navigation" class="hidden">
-        <img src="https://i.imgur.com/xJLEWnx.png">
-        <p>What's Open?</p>
-        <a href="">New Search</a>
-    </nav>
-    <footer>
-        <p>Created by Nick Brown.</p>
-        <p>Email: <a href="mailto:nickb1046@gmail.com">
-        nickb1046@gmail.com</a></p>
-    </footer>
+    <script
+      type="text/javascript"
+      language="javascript"
+      src="jsonData.js"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+  <nav role="navigation" class="hidden">
+    <img src="https://i.imgur.com/xJLEWnx.png" />
+    <p>What's Open?</p>
+    <a href="">New Search</a>
+  </nav>
+  <footer>
+    <p>Created by Nick Brown.</p>
+    <p>Email: <a href="mailto:nickb1046@gmail.com"> nickb1046@gmail.com</a></p>
+  </footer>
 </html>
